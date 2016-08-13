@@ -19,9 +19,34 @@ public class Main {
 		System.out.println(ford.accelerate());
 		System.out.println(ford.brake());
 		
+		Holden holden = new Holden(6, "Holden Comodore");
+		System.out.println(holden.startEngine());
+		System.out.println(holden.accelerate());
+		System.out.println(holden.brake());
 		
 	}
+}
+
+class Holden extends Car{
+
+	public Holden(int cylinders, String name) {
+		super(cylinders, name);
+	}
 	
+	@Override
+	public String startEngine() {
+		return getClass().getSimpleName() + " --> startEngine()"; 
+	}
+
+	@Override
+	public String accelerate() {
+		return getClass().getSimpleName() +	" --> accelerate()";
+	}
+
+	@Override
+	public String brake() {
+		return getClass().getSimpleName() +	" --> brake()";
+	}
 }
 
 
